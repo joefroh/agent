@@ -7,4 +7,7 @@ while True:
     text = input(">")
     if text == "exit":
         break
+    if text == "audit":
+        print(model.messages)
+        continue
     model.chat(text)
