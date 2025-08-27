@@ -5,6 +5,6 @@ model.connect()
 
 while True:
     text = input(">")
+    if text == "exit":
+        break
     model.chat(text)
-
-print("end")
