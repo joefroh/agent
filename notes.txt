@@ -2,3 +2,12 @@ Ollama
 https://github.com/ollama/ollama/blob/main/README.md#quickstart
 
 ollama run gemma3
+
+Useful Links:
+https://www.cohorte.co/blog/using-ollama-with-python-step-by-step-guide
+
+
+Model Notes:
+- gemma3 is small and quick, but cant use tools (at least not directly)
+- deepseek-r1 has to be told to respond in english, but has some thinking construct
+- llama3.1 can use tools
