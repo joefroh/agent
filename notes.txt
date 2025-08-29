@@ -11,3 +11,4 @@ Model Notes:
 - gemma3 is small and quick, but cant use tools (at least not directly)
 - deepseek-r1 has to be told to respond in english, but has some thinking construct
 - llama3.1 can use tools
+- qwen 3 with some system prompt hacking seems to work great. If you don't instruct it well from the sys prompt it essentially refuses to do anything you don't give it a tool for.

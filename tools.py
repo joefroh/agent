@@ -1,16 +1,5 @@
 import os
-
-def do_nothing():
-    """
-    This function does nothing, but can be used if you really want to call a tool.
-
-    Args:
-        None
-
-    Returns:
-        None
-    """
-    return
+import datetime
 
 def list_files(path):
     """
@@ -28,3 +17,12 @@ def list_files(path):
         PermissionError: If there is no permission to access the specified path.
     """
     return os.listdir(path)
+
+def get_now():
+    """_summary_
+    Gets the current machine time.
+
+    Returns:
+        string: the current machine time.
+    """
+    return datetime.datetime.now().__str__()
