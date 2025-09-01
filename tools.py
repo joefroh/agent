@@ -1,7 +1,6 @@
 import os
 import datetime
-import weather_getter
-
+import weather_utils
 
 def list_files(path):
     """
@@ -40,7 +39,7 @@ def get_forecast(long, lat, timezone):
     Returns:
         DataFrame: 7 day forcast.
     """
-    return weather_getter.get_forecast(long, lat, timezone)
+    return weather_utils.get_forecast(long, lat, timezone)
 
 def get_location(name):
     """_summary_
@@ -52,4 +51,4 @@ def get_location(name):
     Returns:
         list: A list of objects containing longitude, latitude, and other important information. In general, the first result is likely what people are searching for.
     """
-    return weather_getter.get_location(name)
+    return weather_utils.get_location(name)
