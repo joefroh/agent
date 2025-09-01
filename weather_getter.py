@@ -2,6 +2,7 @@ import openmeteo_requests
 
 import pandas as pd
 import requests_cache
+import requests
 from retry_requests import retry
 
 def get_forecast(long, lat, timezone):
@@ -56,3 +57,17 @@ def get_forecast(long, lat, timezone):
     print("\nDaily data\n", daily_dataframe)
 
     return daily_dataframe
+
+def get_location(name):
+    # reference: https://open-meteo.com/en/docs/geocoding-api
+
+    url = "https://geocoding-api.open-meteo.com/v1/search"
+    params = {
+        "name": name
+    }
+
+    response = requests.get(url, params=params)
+    if response.status_code == 200:
+        return response.json()['results']
+    else:
+        raise RuntimeError

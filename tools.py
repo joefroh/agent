@@ -1,5 +1,7 @@
 import os
 import datetime
+import weather_getter
+
 
 def list_files(path):
     """
@@ -26,3 +28,28 @@ def get_now():
         string: the current machine time.
     """
     return datetime.datetime.now().__str__()
+
+def get_forecast(long, lat, timezone):
+    """_summary_
+
+    Args:
+        long (float): Longitude of the location.
+        lat (float): Latitude of the location.
+        timezone (timezone): Timezoen of the location - formatted like "America/Los_Angeles".
+
+    Returns:
+        DataFrame: 7 day forcast.
+    """
+    return weather_getter.get_forecast(long, lat, timezone)
+
+def get_location(name):
+    """_summary_
+    Function that gets a list of locations for a given search name. The list includes longitude and latitude as well as other useful information.
+
+    Args:
+        name (string): The name of the location to find.
+
+    Returns:
+        list: A list of objects containing longitude, latitude, and other important information. In general, the first result is likely what people are searching for.
+    """
+    return weather_getter.get_location(name)

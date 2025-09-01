@@ -15,4 +15,4 @@ while True:
     if text == "audit":
         print_messages(model.messages)
         continue
-    model.chat(text)
+    model.user_chat(text)
