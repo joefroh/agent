@@ -2,6 +2,7 @@ import os
 import datetime
 import weather_utils
 
+
 def list_files(path):
     """
     Lists all files and directories in the specified path.
@@ -19,6 +20,7 @@ def list_files(path):
     """
     return os.listdir(path)
 
+
 def get_now():
     """_summary_
     Gets the current machine time.
@@ -27,6 +29,7 @@ def get_now():
         string: the current machine time.
     """
     return datetime.datetime.now().__str__()
+
 
 def get_forecast(long, lat, timezone):
     """_summary_
@@ -40,6 +43,7 @@ def get_forecast(long, lat, timezone):
         DataFrame: 7 day forcast.
     """
     return weather_utils.get_forecast(long, lat, timezone)
+
 
 def get_location(name):
     """_summary_
