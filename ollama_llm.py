@@ -7,7 +7,7 @@ import tools
 class OllamaLLM:
     system_prompt = create_message(
         "system",
-        "/no_think You are a helpful assistant who keeps things brief and responds only in english. Not every prompt requires a tool, if you don't think you need to use one - just respond normally as if you didn't have any provided. When in doubt, do the simplest thing, and keep responses concise.",
+        f"/no_think You are a helpful assistant who keeps things brief and responds only in english. Not every prompt requires a tool, if you don't think you need to use one - just respond normally as if you didn't have any provided. When in doubt, do the simplest thing, and keep responses concise. The current time is {tools.get_now()}",
     )
     initial_user_prompt = create_message("user", "hello")
 
