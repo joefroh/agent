@@ -1,6 +1,7 @@
 import os
 import datetime
 import weather_utils
+import sports_utils
 
 
 def list_files(path):
@@ -56,3 +57,19 @@ def get_location(name):
         list: A list of objects containing longitude, latitude, and other important information. In general, the first result is likely what people are searching for.
     """
     return weather_utils.get_location(name)
+
+
+def get_sports_scores(sport, league=None, date=None, team=None):
+    """
+    Fetches sports scores for a given sport and optional filters.
+
+    Args:
+        sport (str): The sport name (e.g., "football", "basketball", "baseball", "hockey", "soccer")
+        league (str, optional): The league name (e.g., "nfl", "nba", "mlb", "nhl", "premier-league")
+        date (str, optional): Date in YYYY-MM-DD format. Defaults to today if not provided.
+        team (str, optional): Filter by specific team name or abbreviation
+
+    Returns:
+        dict: A dictionary containing game scores and information
+    """
+    return sports_utils.get_sports_scores(sport, league, date, team)

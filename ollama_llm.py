@@ -17,6 +17,7 @@ class OllamaLLM:
         tools.get_now,
         tools.get_forecast,
         tools.get_location,
+        tools.get_sports_scores,
     ]
 
     def __init__(self, model_string):
